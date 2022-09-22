@@ -12,6 +12,7 @@ pod 'FirebaseCore'
 pod 'Firebase/Analytics'
 pod 'FirebaseRemoteConfig'
 pod 'FirebaseCore'
-
+pod 'Alamofire'
+pod 'Kingfisher', '~> 7.0'
 
 end
