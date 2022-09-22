@@ -8,5 +8,10 @@ target 'Lodoos' do
   # Pods for Lodoos
 
 pod 'AFNetworking', '~> 4.0'
+pod 'FirebaseCore'
+pod 'Firebase/Analytics'
+pod 'FirebaseRemoteConfig'
+pod 'FirebaseCore'
+
 
 end
