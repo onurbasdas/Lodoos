@@ -1,4 +1,4 @@
-# Omdp Clone
+# Omdb Clone
 
 [![Swift](https://img.shields.io/badge/Swift-5-orange.svg)](https://swift.org)
 [![Xcode](https://img.shields.io/badge/Xcode-12.4-blue.svg)](https://developer.apple.com/xcode)
