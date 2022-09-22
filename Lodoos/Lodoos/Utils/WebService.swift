@@ -9,9 +9,9 @@ import Foundation
 import Alamofire
 
 class WebService {
-    static func searchMovie(movieName: String, completion: @escaping (SearchResponse?) -> ()) {
+    static func searchMovie(movieID: String, completion: @escaping (SearchResponse?) -> ()) {
         
-        let api = "\(ApiURLs.baseURL)?t=\(movieName)&apikey=\(ApiURLs.apiKey)"
+        let api = "\(ApiURLs.baseURL)?i=\(movieID)&apikey=\(ApiURLs.apiKey)"
         AF.request(api, method: .get, encoding: URLEncoding.default).response { response in
             guard let data = response.data else { return }
             do {
@@ -23,4 +23,22 @@ class WebService {
             }
         }
     }
+    
+    
+    static func getMainSearchMovie(movieName: String, callback: @escaping ([MainSearchModelContent]?) -> ()) {
+        
+        let api = "\(ApiURLs.baseURL)?s=\(movieName)&apikey=\(ApiURLs.apiKey)"
+        AF.request(api, method: .get, encoding: URLEncoding.default).response { response in
+            guard let data = response.data else{return}
+            do {
+                let eventResponse = try JSONDecoder().decode(MainSearchModel.self, from:data)
+                callback(eventResponse.search)
+            } catch let e {
+                print(e)
+                callback(nil)
+            }
+        }
+    }
+    
+    
 }

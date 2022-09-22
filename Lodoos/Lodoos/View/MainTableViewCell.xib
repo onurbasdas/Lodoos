@@ -28,26 +28,20 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="2je-sK-a2P">
-                                <rect key="frame" x="160" y="5" width="214" height="20.333333333333332"/>
+                                <rect key="frame" x="160" y="20" width="214" height="20.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.329999999999998" id="fIx-fv-egF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qji-1R-z2K">
-                                <rect key="frame" x="160" y="35.333333333333336" width="214" height="20.333333333333336"/>
+                                <rect key="frame" x="160" y="50.333333333333336" width="214" height="20.333333333333336"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.329999999999998" id="mfP-Ah-Z49"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Plot" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9aG-Rq-QIC">
-                                <rect key="frame" x="160" y="65.666666666666686" width="214" height="108.33333333333331"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,17 +50,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2je-sK-a2P" secondAttribute="trailing" constant="10" id="3sB-jX-4zo"/>
                             <constraint firstAttribute="bottom" secondItem="W2U-DA-mjf" secondAttribute="bottom" id="DTT-Vb-qN1"/>
-                            <constraint firstAttribute="trailing" secondItem="9aG-Rq-QIC" secondAttribute="trailing" constant="10" id="Oa4-AG-mk6"/>
                             <constraint firstItem="W2U-DA-mjf" firstAttribute="leading" secondItem="z6a-oh-Ozo" secondAttribute="leading" id="SZf-SK-KAX"/>
                             <constraint firstItem="W2U-DA-mjf" firstAttribute="top" secondItem="z6a-oh-Ozo" secondAttribute="top" id="Ukm-uV-LHj"/>
                             <constraint firstItem="2je-sK-a2P" firstAttribute="leading" secondItem="W2U-DA-mjf" secondAttribute="trailing" constant="10" id="XLa-6i-q9c"/>
                             <constraint firstItem="qji-1R-z2K" firstAttribute="leading" secondItem="2je-sK-a2P" secondAttribute="leading" id="fkz-ha-z5p"/>
                             <constraint firstItem="qji-1R-z2K" firstAttribute="trailing" secondItem="2je-sK-a2P" secondAttribute="trailing" id="gtl-0F-qCF"/>
                             <constraint firstItem="qji-1R-z2K" firstAttribute="top" secondItem="2je-sK-a2P" secondAttribute="bottom" constant="10" id="hHU-Ki-bzh"/>
-                            <constraint firstItem="9aG-Rq-QIC" firstAttribute="leading" secondItem="W2U-DA-mjf" secondAttribute="trailing" constant="10" id="j4H-fe-kS9"/>
-                            <constraint firstAttribute="bottom" secondItem="9aG-Rq-QIC" secondAttribute="bottom" constant="10" id="nRU-wJ-7wa"/>
-                            <constraint firstItem="9aG-Rq-QIC" firstAttribute="top" secondItem="qji-1R-z2K" secondAttribute="bottom" constant="10" id="oQj-At-NiW"/>
-                            <constraint firstItem="2je-sK-a2P" firstAttribute="top" secondItem="z6a-oh-Ozo" secondAttribute="top" constant="5" id="rdR-cE-kFT"/>
+                            <constraint firstItem="2je-sK-a2P" firstAttribute="top" secondItem="z6a-oh-Ozo" secondAttribute="top" constant="20" id="rdR-cE-kFT"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -80,7 +70,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="genreLabel" destination="qji-1R-z2K" id="Z7c-XO-fs3"/>
-                <outlet property="plotLabel" destination="9aG-Rq-QIC" id="o7M-iy-6eA"/>
                 <outlet property="posterImageView" destination="W2U-DA-mjf" id="hNc-Nk-hhQ"/>
                 <outlet property="titleLabel" destination="2je-sK-a2P" id="v2b-DB-hDE"/>
             </connections>

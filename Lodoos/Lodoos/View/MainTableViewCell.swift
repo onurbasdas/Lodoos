@@ -18,7 +18,6 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var genreLabel: UILabel!
-    @IBOutlet var plotLabel: UILabel!
     
 
     override func awakeFromNib() {
@@ -29,12 +28,19 @@ class MainTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func loadData(data: SearchResponse) {
+//    func loadData(data: SearchResponse) {
+//        let url = URL(string: data.poster ?? "")
+//        posterImageView.kf.setImage(with: url)
+//        titleLabel.text = data.title
+//        genreLabel.text = data.genre
+//        plotLabel.text = data.plot
+//    }
+    
+    func loadData(data: MainSearchModelContent) {
         let url = URL(string: data.poster ?? "")
         posterImageView.kf.setImage(with: url)
         titleLabel.text = data.title
-        genreLabel.text = data.genre
-        plotLabel.text = data.plot
+        genreLabel.text = data.year
     }
     
 }

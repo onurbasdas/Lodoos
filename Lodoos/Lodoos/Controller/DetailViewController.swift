@@ -9,8 +9,7 @@ import UIKit
 import Kingfisher
 
 class DetailViewController: UIViewController {
-    
-    var detailObj : SearchResponse?
+    var detailMovieID : String = ""
     
     @IBOutlet var detailImageView: UIImageView!
     @IBOutlet var detailTitleLabel: UILabel!
@@ -25,16 +24,20 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: detailObj?.poster ?? "")
-        detailImageView.kf.setImage(with: url)
-        detailTitleLabel.text = detailObj?.title
-        detailRatingLabel.text = "Rating: \(detailObj?.imdbRating ?? "")"
-        detailPlotLabel.text = detailObj?.plot
-        detailActorsLabel.text = "Actors: \(detailObj?.actors ?? ""))"
-        detailWriterLabel.text = "Writer: \(detailObj?.writer ?? "")"
-        detailGenreLabel.text = "Genre: \(detailObj?.genre ?? "")"
-        detailCountryLabel.text = "Country: \(detailObj?.country ?? "")"
-        detailReleasedLabel.text = "Released: \(detailObj?.released ?? "")"
+        self.showSpinner()
+        WebService.searchMovie(movieID: detailMovieID) { [self] result in
+            let url = URL(string: result?.poster ?? "")
+            detailImageView.kf.setImage(with: url)
+            detailTitleLabel.text = result?.title
+            detailRatingLabel.text = "Rating: \(result?.imdbRating ?? "")"
+            detailPlotLabel.text = result?.plot
+            detailActorsLabel.text = "Actors: \(result?.actors ?? ""))"
+            detailWriterLabel.text = "Writer: \(result?.writer ?? "")"
+            detailGenreLabel.text = "Genre: \(result?.genre ?? "")"
+            detailCountryLabel.text = "Country: \(result?.country ?? "")"
+            detailReleasedLabel.text = "Released: \(result?.released ?? "")"
+            self.removeSpinner()
+        }
     }
 
 }
