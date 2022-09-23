@@ -58,7 +58,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         getData(title: searchText)
-        if searchText.isEmpty {
+        if searchText == "" {
             mainEmptyMovieBackView.isHidden = false
         } else {
             mainEmptyMovieBackView.isHidden = true

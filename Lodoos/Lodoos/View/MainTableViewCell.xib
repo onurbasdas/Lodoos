@@ -27,17 +27,14 @@
                                     <constraint firstAttribute="height" constant="184" id="oEd-oi-bLo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="2je-sK-a2P">
-                                <rect key="frame" x="160" y="20" width="214" height="20.333333333333329"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20.329999999999998" id="fIx-fv-egF"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2je-sK-a2P">
+                                <rect key="frame" x="160" y="20" width="214" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qji-1R-z2K">
-                                <rect key="frame" x="160" y="50.333333333333336" width="214" height="20.333333333333336"/>
+                                <rect key="frame" x="160" y="56.000000000000007" width="214" height="20.333333333333336"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.329999999999998" id="mfP-Ah-Z49"/>
                                 </constraints>
