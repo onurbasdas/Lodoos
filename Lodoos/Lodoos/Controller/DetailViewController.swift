@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Firebase
 
 class DetailViewController: UIViewController {
     var detailMovieID : String = ""
@@ -24,6 +25,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        Analytics.logEvent("DetailControllerClicked", parameters: nil)
+        
         self.showSpinner()
         WebService.searchMovie(movieID: detailMovieID) { [self] result in
             let url = URL(string: result?.poster ?? "")

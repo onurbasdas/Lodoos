@@ -26,8 +26,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func getData(title: String) {
         WebService.getMainSearchMovie(movieName: title) { [self] result in
             mainSearchArray = result ?? []
-            DispatchQueue.main.async {
-                self.mainTableView.reloadData()
+            if ((result?.isEmpty) != nil) {
+                mainEmptyMovieBackView.isHidden = true
+                DispatchQueue.main.async {
+                    self.mainTableView.reloadData()
+                }
+            } else {
+                mainEmptyMovieBackView.isHidden = false
             }
         }
     }
@@ -58,11 +63,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         getData(title: searchText)
-        if searchText == "" {
-            mainEmptyMovieBackView.isHidden = false
-        } else {
-            mainEmptyMovieBackView.isHidden = true
-        }
         mainSearchArray = []
     }
     
